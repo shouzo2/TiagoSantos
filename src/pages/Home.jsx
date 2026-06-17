@@ -25,15 +25,12 @@ const Home = () => {
         <a href="https://www.instagram.com/shouzo_tiago/" target="_blank" rel="noopener noreferrer" title="Instagram">
           <i className="fab fa-instagram"></i>
         </a>
-        <a href="https://www.youtube.com/watch?v=2YkJha47-LY&ab_channel=Shouzo" target="_blank" rel="noopener noreferrer" title="YouTube">
+        <a href="https://www.youtube.com/@Shouzo-euw" target="_blank" rel="noopener noreferrer" title="YouTube">
           <i className="fab fa-youtube"></i>
         </a>
-        <a href="https://www.etsy.com/shop/DigityOne" target="_blank" rel="noopener noreferrer" title="Etsy">
-          <i className="fa-brands fa-etsy"></i>
+        <a href="https://www.behance.net/tiagosantos879" target="_blank" rel="noopener noreferrer" title="Behance">
+          <i className="fa-brands fa-behance"></i>
         </a>
       </div>
     </div>
   )
-}
-
-export default Home
