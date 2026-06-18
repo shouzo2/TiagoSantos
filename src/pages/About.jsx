@@ -16,19 +16,11 @@ const About = () => {
         <div className="bio">
           <h3 className="text-secondary">BIO</h3>
           <p>
-            My name is Tiago Santos and I was born in a small city named Braga, 
-            Portugal. I developed a passion for graphic design and arts, as I 
-            desired to reflect the beauty of Portugal's people and culture
-            through my artwork. From the beginning of my journey as an artistic 
-            designer, I have created artwork that gave rise to my passion for 
-            digital work. I have studied in the Master of Technology and Digital 
-            Art at the University of Minho in Braga. My professional expertise 
-            is in animation, illustration, and drawing. I also have experience 
-            with typography, photo manipulation, photo retouching and video 
-            editing. I have helped many clients with logo and identity design, 
-            signage, publications, layout, and package design. 
-            You can check out my Work pages and links to review some of my client 
-            projects as well as personal projects.
+           I'm a multidisciplinary designer and digital artist from Braga, Portugal, with a Master's degree in Technology and Digital Art from the University of Minho. My passion for creativity began with a desire to capture and celebrate the beauty of culture, people, and visual storytelling through design.
+
+I specialize in animation, illustration, and drawing, with additional expertise in typography, photo retouching, photo manipulation, and video editing. Over the years, I've worked with clients on branding, logo design, packaging, publications, signage, and visual identity projects, helping bring their ideas to life through thoughtful and engaging design.
+
+Explore my portfolio to see a selection of professional and personal projects that reflect my skills, creativity, and dedication to visual communication.
           </p>
         </div>
       </div>
@@ -38,30 +30,22 @@ const About = () => {
           <h3>Designer</h3>
           <h6>Graphics</h6>
           <p>
-            My journey as Graphic started early when I first engage a 3 years
-            course in Coimbra, Art and Design. As Graphic designer and Artist I
-            worked with both text and images. I managed to select the type,
-            font, size, color, and line length of headlines, headings, and text.
-            Also I decide how images and text will go together on a print or
-            webpage, including how much space each will have. Through the use of images,
-            text, and color, I am able to transform statistical data into visual graphics 
-            and diagrams, which can make complex ideas more accessible. I worked for a typography
-            Rolsaco 2018 where my main job was creating business cards, flyers and posters.
-          </p>
+           My journey in graphic design began with a three-year Art and Design course in Coimbra, where I developed a strong foundation in visual communication, typography, and creative problem-solving.
+
+As a graphic designer and artist, I work with both text and imagery to create clear, engaging, and effective visual experiences. I carefully consider typography, layout, color, composition, and visual hierarchy to ensure that every design communicates its message with impact. Whether designing for print or digital platforms, I focus on creating balanced and cohesive designs that connect with their audience.
+
+I also enjoy transforming complex information into accessible visual graphics and infographics, using design to simplify ideas and enhance understanding.
+
+In 2018, I worked at Rolsaco, where I was responsible for designing a variety of marketing and corporate materials, including business cards, flyers, posters, and other promotional assets. This experience strengthened my practical design skills and deepened my understanding of branding, print production, and client-focused communication.          </p>
         </div>
 
         <div className="job-card">
           <h3>Programmer</h3>
           <h6>Front End Developer</h6>
           <p>
-            As a student from the Master Programme in Technology and Digital Art
-            (MTAD) of the EEUM I've been part of the organised exhibition "Media
-            & Digital Art Exhibition", on the 17th and 18th June of 2016, at the
-            Couros Campus of the University of Minho in Guimarães. The art
-            installations exposed in this exhibition were an example of the
-            result of the skills acquired during the master programme. The exhibition 
-            comprised works that explored concepts of interactivity, electronic music, 
-            sound design, 3D animation, game design, sensors and computer vision.
+          As part of the Master's Programme in Technology and Digital Art (MTAD) at the University of Minho, I participated in the Media & Digital Art Exhibition at the Couros Campus in Guimarães.
+
+The exhibition featured student-created installations and projects exploring interactivity, electronic music, sound design, 3D animation, game design, sensor technologies, and computer vision. The event showcased the creative and technical skills developed throughout the programme and provided a platform for presenting innovative digital art to the public.
           </p>
           <p style={{ marginTop: '1rem' }}>
             <a
@@ -78,16 +62,11 @@ const About = () => {
           <h3>UX/UI Designer</h3>
           <h6>User Interaction</h6>
           <p>
-            My first experience as UX/UI Designer was also at the master program
-            I was enrolled in. I have done mockups for User Interface Layout,
-            studied about Personas and also created the User Experience
-            Interface for small mobile application. In 2017 I was part of an
-            internship at a company in Brasil with the name of Instituto Stela
-            and there I was responsible for the designing of a mobile
-            application for macOS and Android. That application worked on the
-            concept of the firm website, which the aim was provide a search for
-            helping universities and the Employers finding the best candidate. 
-            The mobile app I was prototyping was MyRate.
+            My first experience in UX/UI design began during my Master's Programme in Technology and Digital Art, where I developed skills in user-centered design, interface prototyping, and usability principles. Throughout the programme, I created user interface mockups, conducted persona research, and designed user experiences for mobile applications, focusing on creating intuitive and engaging digital products.
+
+In 2017, I completed an internship at Instituto Stela in Brazil, where I worked on the design and prototyping of MyRate, a mobile application for Android and macOS. The project was developed as an extension of the company's platform, which aimed to connect universities and employers by helping them identify and recruit the most suitable candidates.
+
+My responsibilities included user experience planning, interface design, wireframing, and prototyping, ensuring that the application provided a clear, accessible, and user-friendly experience. This opportunity allowed me to apply UX research methods and design thinking principles in a professional environment while collaborating on a real-world digital product.
           </p>
         </div>
       </div>

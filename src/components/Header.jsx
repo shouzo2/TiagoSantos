@@ -77,6 +77,16 @@ const Header = () => {
             Contact
           </NavLink>
         </li>
+        <li>
+            <NavLink
+            to="/videos"
+            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+  >
+    Videos
+  </NavLink>
+</li>
+         
+
       </ul>
     </header>
   )
