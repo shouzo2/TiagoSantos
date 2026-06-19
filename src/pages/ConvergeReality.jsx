@@ -4,7 +4,7 @@ const ConvergeReality = () => {
   return (
     <div className="work-page">
       <h1 className="lg-heading">
-        Book <span className="text-secondary">Part 1</span>
+        Book <span className="text-secondary">Begin</span>
       </h1>
       <h2 className="sm-heading">Converging Reality</h2>
       

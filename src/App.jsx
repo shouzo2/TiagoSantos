@@ -9,7 +9,6 @@ import Teste from './pages/Teste'
 import Surreal from './pages/Surreal'
 import Contact from './pages/Contact'
 import ConvergeReality from './pages/ConvergeReality'
-import Videos from './pages/Videos'
 
 function App() {
   return (
@@ -24,7 +23,7 @@ function App() {
             <Route path="/more-work" element={<Teste />} />
             <Route path="/surreal" element={<Surreal />} />
             <Route path="/contact" element={<Contact />} />
-             <Route path="/videos" element={<Videos />} />
+            <Route path="/book" element={<ConvergeReality />} />
           </Routes>
         </main>
         <Footer />
