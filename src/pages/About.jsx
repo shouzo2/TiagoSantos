@@ -64,7 +64,7 @@ The exhibition featured student-created installations and projects exploring int
           <p>
             My first experience in UX/UI design began during my Master's Programme in Technology and Digital Art, where I developed skills in user-centered design, interface prototyping, and usability principles. Throughout the programme, I created user interface mockups, conducted persona research, and designed user experiences for mobile applications, focusing on creating intuitive and engaging digital products.
 
-In 2017, I completed an internship at Instituto Stela in Brazil, where I worked on the design and prototyping of MyRate, a mobile application for Android and macOS. The project was developed as an extension of the company's platform, which aimed to connect universities and employers by helping them identify and recruit the most suitable candidates.
+In 2017, I completed an  internship at Instituto Stela in Brazil, where I worked on the design and prototyping of MyRate, a mobile application for Android and macOS. The project was developed as an extension of the company's platform, which aimed to connect universities and employers by helping them identify and recruit the most suitable candidates.
 
 My responsibilities included user experience planning, interface design, wireframing, and prototyping, ensuring that the application provided a clear, accessible, and user-friendly experience. This opportunity allowed me to apply UX research methods and design thinking principles in a professional environment while collaborating on a real-world digital product.
           </p>
