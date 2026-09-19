@@ -9,7 +9,7 @@ const SHOP_CONFIG = {
   title: 'Digityone Shop',
   subtitle: 'Check out my official digital shop & products',
   shopUrl: 'https://digityone.com', // <-- REPLACE WITH YOUR SHOP URL
-  logoUrl: '',                       // <-- REPLACE WITH YOUR LOGO IMAGE URL / PATH (e.g. '/img/logo.png' or 'https://...')
+  logoUrl: 'C:\Users\mn_st\Desktop\TiagoSantos-main\TiagoSantos\TiagoSantos\public\img\digityonelogo.jpg',                       // <-- REPLACE WITH YOUR LOGO IMAGE URL / PATH (e.g. '/img/logo.png' or 'https://...')
   badgeText: 'Visit Shop'
 }
 

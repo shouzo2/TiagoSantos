@@ -9,7 +9,7 @@ const SHOP_CONFIG = {
   title: 'Digityone Shop',
   subtitle: 'Check out my official digital shop & products',
   shopUrl: 'https://digityone1.vercel.app', // <-- YOUR VERCEL SHOP URL
-  logoUrl: '/img/digityone-logo.jpg',       // <-- YOUR LOGO IMAGE SERVED FROM PUBLIC FOLDER
+  logoUrl: '/img/digityonelogo.jpg',       // <-- YOUR LOGO IMAGE SERVED FROM PUBLIC FOLDER
   badgeText: 'Visit Shop'
 }
 
