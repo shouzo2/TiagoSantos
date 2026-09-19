@@ -8,8 +8,8 @@ import { FaStore, FaShoppingBag, FaExternalLinkAlt, FaTwitter, FaFacebook, FaLin
 const SHOP_CONFIG = {
   title: 'Digityone Shop',
   subtitle: 'Check out my official digital shop & products',
-  shopUrl: 'https://digityone1.vercel.app', // <-- YOUR VERCEL SHOP URL
-  logoUrl: '/img/digityonelogo.jpg',       // <-- YOUR LOGO IMAGE SERVED FROM PUBLIC FOLDER
+  shopUrl: 'https://digityone.com', // <-- REPLACE WITH YOUR SHOP URL
+  logoUrl: 'C:\Users\mn_st\Desktop\TiagoSantos-main\TiagoSantos\TiagoSantos\public\img\digityonelogo.jpg',                       // <-- REPLACE WITH YOUR LOGO IMAGE URL / PATH (e.g. '/img/logo.png' or 'https://...')
   badgeText: 'Visit Shop'
 }
 
@@ -39,6 +39,7 @@ const Home = () => {
                 alt={SHOP_CONFIG.title}
                 className="shop-logo-img"
                 onError={(e) => {
+                  // Fallback if logo URL image fails to load
                   e.target.style.display = 'none'
                   e.target.nextSibling.style.display = 'flex'
                 }}
