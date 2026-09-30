@@ -68,6 +68,16 @@ const Header = () => {
           </NavLink>
         </li>
         <li>
+          <NavLink to="/universe" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+            Scenario & Cards
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/game" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+            🎮 Card Game
+          </NavLink>
+        </li>
+        <li>
           <NavLink to="/book" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
             Book Part 1
           </NavLink>

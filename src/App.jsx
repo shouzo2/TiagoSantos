@@ -10,6 +10,8 @@ import Surreal from './pages/Surreal'
 import Contact from './pages/Contact'
 import ConvergeReality from './pages/ConvergeReality'
 import Videos from './pages/Videos'
+import Universe from './pages/Universe'
+import CardGame from './pages/CardGame'
 
 function App() {
   return (
@@ -23,6 +25,11 @@ function App() {
             <Route path="/work" element={<Work />} />
             <Route path="/more-work" element={<Teste />} />
             <Route path="/surreal" element={<Surreal />} />
+            <Route path="/universe" element={<Universe />} />
+            <Route path="/scenario" element={<Universe />} />
+            <Route path="/cards" element={<Universe />} />
+            <Route path="/game" element={<CardGame />} />
+            <Route path="/play" element={<CardGame />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/book" element={<ConvergeReality />} />
             <Route path="/videos" element={<Videos />} />
