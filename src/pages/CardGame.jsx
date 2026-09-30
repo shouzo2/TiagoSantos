@@ -30,7 +30,8 @@ import {
   FaVolumeUp,
   FaVolumeMute,
   FaCrosshairs,
-  FaRandom
+  FaRandom,
+  FaMusic
 } from 'react-icons/fa'
 
 // Verified artwork images from your site portfolio (public folder & Surreal gallery)
@@ -256,6 +257,104 @@ const playSFX = (type, enabled = true) => {
   } catch (e) {}
 }
 
+// Procedural Lo-Fi Ambient Chill Music Generator
+class ChillMusicPlayer {
+  constructor() {
+    this.ctx = null
+    this.timer = null
+    this.isPlaying = false
+  }
+
+  start() {
+    if (this.isPlaying) return
+    try {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext
+      if (!AudioCtx) return
+      this.ctx = new AudioCtx()
+      if (this.ctx.state === 'suspended') this.ctx.resume()
+
+      this.isPlaying = true
+      let bar = 0
+
+      // Lo-fi Chill Chords (Cmaj7, Em7, Am7, Fmaj7)
+      const chords = [
+        [130.81, 164.81, 196.00, 246.94], // C3, E3, G3, B3
+        [164.81, 196.00, 246.94, 293.66], // E3, G3, B3, D4
+        [110.00, 130.81, 164.81, 196.00], // A2, C3, E3, G3
+        [174.61, 220.00, 261.63, 329.63]  // F3, A3, C4, E4
+      ]
+
+      const arpeggio = [329.63, 392.00, 493.88, 587.33, 659.25]
+
+      const playBar = () => {
+        if (!this.isPlaying || !this.ctx) return
+        const now = this.ctx.currentTime
+        const chord = chords[bar % chords.length]
+        bar++
+
+        // Warm Pad Chords
+        chord.forEach(freq => {
+          const osc = this.ctx.createOscillator()
+          const filter = this.ctx.createBiquadFilter()
+          const gain = this.ctx.createGain()
+
+          osc.type = 'sine'
+          osc.frequency.setValueAtTime(freq, now)
+
+          filter.type = 'lowpass'
+          filter.frequency.setValueAtTime(450, now)
+
+          gain.gain.setValueAtTime(0.01, now)
+          gain.gain.linearRampToValueAtTime(0.06, now + 1.2)
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 3.8)
+
+          osc.connect(filter)
+          filter.connect(gain)
+          gain.connect(this.ctx.destination)
+
+          osc.start(now)
+          osc.stop(now + 4.0)
+        })
+
+        // Gentle Ambient Plucks
+        for (let i = 0; i < 3; i++) {
+          const startTime = now + i * 1.2 + Math.random() * 0.4
+          const pluckFreq = arpeggio[Math.floor(Math.random() * arpeggio.length)]
+
+          const pOsc = this.ctx.createOscillator()
+          const pGain = this.ctx.createGain()
+          pOsc.type = 'sine'
+          pOsc.frequency.setValueAtTime(pluckFreq, startTime)
+
+          pGain.gain.setValueAtTime(0.03, startTime)
+          pGain.gain.exponentialRampToValueAtTime(0.001, startTime + 1.5)
+
+          pOsc.connect(pGain)
+          pGain.connect(this.ctx.destination)
+
+          pOsc.start(startTime)
+          pOsc.stop(startTime + 1.5)
+        }
+
+        this.timer = setTimeout(playBar, 4000)
+      }
+
+      playBar()
+    } catch (e) {}
+  }
+
+  stop() {
+    this.isPlaying = false
+    if (this.timer) clearTimeout(this.timer)
+    if (this.ctx) {
+      try { this.ctx.close() } catch (e) {}
+      this.ctx = null
+    }
+  }
+}
+
+const chillMusic = new ChillMusicPlayer()
+
 const CardGame = () => {
   // Game state mode: 'menu' | 'playing' | 'victory' | 'defeat'
   const [gameMode, setGameMode] = useState('menu')
@@ -268,6 +367,7 @@ const CardGame = () => {
 
   // Audio Toggle
   const [sfxEnabled, setSfxEnabled] = useState(true)
+  const [musicEnabled, setMusicEnabled] = useState(true)
 
   // Randomized Hero Artwork & Titles
   const [p1HeroImg, setP1HeroImg] = useState('acd.png')
@@ -428,6 +528,16 @@ const CardGame = () => {
       localStorage.setItem(`cg_room_${roomCode}`, JSON.stringify({ state: fullState, timestamp: Date.now() }))
     } catch (e) {}
   }
+
+  // Chill Background Music Controller
+  useEffect(() => {
+    if (gameMode === 'playing' && musicEnabled) {
+      chillMusic.start()
+    } else {
+      chillMusic.stop()
+    }
+    return () => chillMusic.stop()
+  }, [gameMode, musicEnabled])
 
   // Listen for BroadcastChannel & localStorage sync
   useEffect(() => {
@@ -1428,6 +1538,10 @@ const CardGame = () => {
             </div>
 
             <div className="arena-top-actions">
+              <button className={`toggle-sfx-btn ${musicEnabled ? 'active-music' : ''}`} onClick={() => setMusicEnabled(!musicEnabled)} title="Toggle Chill Background Music">
+                <FaMusic /> {musicEnabled ? 'Chill Music ON' : 'Chill Music OFF'}
+              </button>
+
               <button className="toggle-sfx-btn" onClick={randomizeHeroes} title="Reroll Random Hero Pictures">
                 <FaRandom /> Reroll Heroes
               </button>
